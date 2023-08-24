@@ -1,0 +1,81 @@
+<div class="container-fluid mb-5 py-5">
+    <div class="row">
+        <div class="col-xs-12">
+            <ol>
+                <li>Add a button which says 'Display Details'</li>
+                <li>Add a paragraph with any content of your choice</li>
+                <li>Log all button clicks in an array and output that array below the secret paragraph</li>
+                <li>Starting at the 5th log item , give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
+            </ol>
+            <hr>
+            <!-- <button class="btn btn-primary" (click)="showParagraph = !showParagraph">Display Details</button> -->
+            <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+            <p *ngIf="showParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio maiores, fugiat illo assumenda magni dolorem aperiam illum eaque, qui quisquam obcaecati architecto quaerat hic! Accusantium magnam dicta officia enim a sunt ipsum doloribus animi consectetur, doloremque asperiores quo numquam fugit! Nesciunt ea vero perferendis itaque repellat in cum dicta perspiciatis?</p>
+            <div *ngFor="let logItem of log; let i = index"
+            [ngStyle]="{'background-color' : i >= 5 ? 'blue' : 'transparent'}"
+            [ngClass]="{'white-text' : i >= 5}"
+            >{{ logItem }}</div>
+        </div>
+    </div>
+</div>
+
+<div class="container box">
+    <div class="row">
+      <div class="col-xs-12">
+        <button
+          class="btn btn-primary"
+          (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
+        <br><br>
+        <ul class="list-group">
+          <div *ngIf="onlyOdd">
+             <li
+            class="list-group-item"
+            [ngClass]="{odd1: odd % 2 !== 0}"
+            [ngStyle]="{backgroundColor: odd % 2 !==0 ? 'yellow' : 'transparent'}"
+            *ngFor="let odd of oddNumbers">
+            {{odd}}
+          </li>
+          </div>
+          <!-- <div *ngIf="!onlyOdd">
+             <li
+            class="list-group-item"
+            [ngClass]="{odd1: even % 2 !== 0}"
+            [ngStyle]="{backgroundColor: even % 2 !==0 ? 'yellow' : 'transparent'}"
+            *ngFor="let even of evenNumbers">
+            {{even}}
+          </li>
+          </div>
+          <ng-template [ngIf]="!onlyOdd">
+            <div>
+              <li
+              class="list-group-item"
+              [ngClass]="{odd1: even % 2 !== 0}"
+              [ngStyle]="{backgroundColor: even % 2 !==0 ? 'yellow' : 'transparent'}"
+              *ngFor="let even of evenNumbers">
+              {{even}}
+            </li>
+            </div>
+          </ng-template> -->
+
+          <div *appUnless="onlyOdd">
+            <li
+           class="list-group-item"
+           [ngClass]="{odd1: even % 2 !== 0}"
+           [ngStyle]="{backgroundColor: even % 2 !==0 ? 'yellow' : 'transparent'}"
+           *ngFor="let even of evenNumbers">
+           {{even}}
+         </li>
+         </div>
+
+        </ul>
+ 
+        <p appBasicHighlight class="mt-5">
+          Style me with custom attribute directive
+        </p>
+         <p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">
+          HOVER OVER ME (style me with a custom attribute directive using a renderer of type Renderer2 and a @HostListener with setStyle() property and then with using @HostBinding to bind to Host Properties also with binding with directiv property using @Input() decorator)
+        </p>
+        
+      </div>
+    </div>
+  </div>

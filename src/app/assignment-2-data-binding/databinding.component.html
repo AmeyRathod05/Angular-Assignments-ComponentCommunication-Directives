@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 bg-success text-white">
+      <h6>Angular Assignment (Data Binding:String Interpolation, Event Binding,Property Binding)</h6>
+      <ol>
+        <li>Add input field which updates a property ('username') via two-way-binding</li>
+        <li>output the username property via string interpolation (in a paragraph below the input)</li>
+        <li>add a button which may only be clicked if the username is NOT an empty string</li>
+        <li>
+          upon clicking the button , the username should be reset to an empty string
+        </li>
+      </ol>
+    </div>
+      <hr>
+      <hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+
+            <label>Username</label>
+            <input type="text" class="form-control mt-2" [(ngModel)]="username">
+            <p>{{ username }}</p>
+            <button 
+            class="btn  btn-primary" 
+            [disabled]="username === ''"
+            (click)="username = ''"
+            >Reset</button>
+          </div>
+        </div>
+      </div>
+        
+  </div>
+</div>

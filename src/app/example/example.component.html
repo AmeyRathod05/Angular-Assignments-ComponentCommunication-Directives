@@ -1,0 +1,118 @@
+<div class="container-fluid">
+
+
+   <h5 class="bg-success text-white p-1"> ngIf Example</h5>
+   <div *ngIf="true">Display data</div>
+
+   <hr>
+   <hr>
+
+   <h5 class="bg-success text-white p-1"> ngIfElse Example</h5>
+   <div *ngIf="isLogIn; else isLogOut" class="container">
+      Hello you are logged in
+   </div>
+   <ng-template #isLogOut>
+      You're logged out..
+   </ng-template>
+
+   <hr>
+   <hr>
+
+   <h5 class="bg-success text-white p-1">ngFor directive examples</h5>
+   <ul>
+      <li *ngFor="let l of list">
+         {{l}}
+      </li>
+   </ul>
+
+   <hr>
+
+   <ul>
+      <li *ngFor="let std of studentArr; trackBy: trackByData">
+         {{std.name}}
+      </li>
+   </ul>
+
+   <hr>
+
+   
+</div>
+<hr>
+<div class="container-fluid">
+   <h5 class="bg-success text-white p-1"> ngFor Example- displaying data into the DOM using a table</h5>
+   <table class='table'>
+      <thead>
+         <tr>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Cast</th>
+            <th>Release Date</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let movie of movies;">
+            <td>{{movie.title}}</td>
+            <td>{{movie.director}}</td>
+            <td>{{movie.cast}}</td>
+            <td>{{movie.releaseDate}}</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+<hr>
+<div class="container-fluid">
+   <h5 class="bg-success text-white p-1"> ngClass Example- displaying data into the DOM using a table / adding styles to it using ngClass </h5>
+   <table>
+      <thead>
+         <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr 
+         *ngFor="let student of students;
+         let even = even ; let odd = odd"
+         [ngClass]="{even:even,odd:odd}"
+         >
+            <td>{{student.name}}</td>
+            <td>{{student.class}}</td>
+            <td>{{student.rollNumber}}</td>
+            <td>{{student.email}}</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+<div class="container mt-5 bg-primary text-white">
+   <p>{{firstString}}</p>
+   <p>{{firstString | uppercase}}</p>
+   <p>{{secondString | lowercase}}</p>
+   <p>{{firstString | titlecase}}</p>
+   <p>{{firstString | slice:3:7}}</p>
+   <p>{{myArray | slice:3:7}}</p>
+   <p>{{currentDate | date}}</p>
+   <p>{{currentDate | date:'long'}}</p>
+   <p>{{currentDate | date:'short'}}</p>
+   <p>{{currentDate | date:'medium'}}</p>
+   <p>{{currentDate | date:'full'}}</p>
+   <p>{{currentDate | date:'shortDate'}}</p>
+   <p>{{currentDate | date:'mediumDate'}}</p>
+   <p>{{currentDate | date:'longTime'}}</p>
+   <p>{{currentDate | date:'fullTime'}}</p>
+   <p>{{currentDate | date:'dd-mm-y'}}</p>
+   <p>{{currentDate | date:'dd-MM-yy HH:mm'}}</p>
+   <p>num{{num|number}}</p>
+   <p>currency :  {{currency1|currency}}</p>
+   <p>{{currency1 | currency }}</p>
+   <p>{{currency1 | currency:'INR':false }}</p>
+   <p>{{currency1 | currency:'INR'}}</p>
+   <p>{{currency1 | currency:'USD'}}</p>
+   <p>{{currency1 | currency:'EUR'}}</p>
+   <p>{{currency1 | currency:'JPY'}}</p>
+   <p>{{currency1 | currency:'CAD'}}</p>
+   <p>{{currency1 | currency:'CLP'}}</p>
+</div>
+
