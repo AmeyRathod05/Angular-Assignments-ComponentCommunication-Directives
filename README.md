@@ -1,4 +1,11 @@
 # AngularAssignment2
+![Screenshot 2023-07-10 at 14-16-06 AngularAssignment](https://github.com/AmeyRathod05/Angular-Assignments-ComponentCommunication-Directives/assets/127238907/c5b64541-8caa-42fd-871c-699e8ce52cb5)
+![Screenshot 2023-07-12 at 19-38-14 AngularAssignment2](https://github.com/AmeyRathod05/Angular-Assignments-ComponentCommunication-Directives/assets/127238907/865cdb66-537b-4a3b-998b-9d46b5123510)
+![Screenshot 2023-07-23 at 22-53-11 AngularAssignment2](https://github.com/AmeyRathod05/Angular-Assignments-ComponentCommunication-Directives/assets/127238907/9ad3a2bc-920f-48d4-93d2-392a0d866286)
+![Screenshot 2023-07-23 at 22-53-31 AngularAssignment2](https://github.com/AmeyRathod05/Angular-Assignments-ComponentCommunication-Directives/assets/127238907/2eba6fdd-62e0-4ab6-9e0f-2643852ef78a)
+![Screenshot 2023-08-24 110747](https://github.com/AmeyRathod05/Angular-Assignments-ComponentCommunication-Directives/assets/127238907/9c5597cf-1eec-4dc2-a2eb-72be6a62b1ff)
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
