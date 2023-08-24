@@ -1,0 +1,2 @@
+# Angular-Assignments-ComponentCommunication-Directives
+Angular Assignments- by completing the following assignments i understood the various concepts of components,property &amp; event binding, binding to custom properties and custom events,assigning an alias to custom properties, understood view encapsulation,local references, component lifecycles hooks and template access.directives(ngClass,ngStyle,etc) 
